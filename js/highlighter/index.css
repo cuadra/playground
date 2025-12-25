@@ -1,0 +1,15 @@
+@keyframes fadeOut{
+from{
+background-color: yellow;
+}
+to{
+background-color: transparent;
+}
+}
+
+.highlight{
+animation-duration: 1s;
+animation-name:fadeOut;
+animation-iteration-count: 1;
+animation-direction: normal;
+}

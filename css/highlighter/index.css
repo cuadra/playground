@@ -1,0 +1,6 @@
+::target-text {
+  background-color: yellow;
+}
+:target{
+  background-color: pink;
+}

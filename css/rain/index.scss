@@ -1,0 +1,88 @@
+@use 'sass:list';
+@use 'sass:math';
+html,body{
+  height:100%;
+}
+body{
+  overflow:hidden;
+ background-color:black;
+}
+img{
+  min-width:100%;
+  min-height:100%;
+  filter: invert(0%);
+  animation: flicker 8s infinite;
+  z-index:1;
+  position:absolute;
+  left:0;
+  top:0;
+}
+.rain{
+  position:relative;
+  z-index:2;
+}
+@keyframes flicker{
+  47%{
+      filter:invert(0%);
+  }
+  48%{
+      filter:invert(100%);
+  }
+  49%{
+      filter:invert(10%);
+  }
+  50%{
+      filter: invert(100%);
+  }
+  51%{
+      filter: invert(10%);
+  }
+  52%{
+      filter: invert(100%);
+  }
+  53%{
+      filter: invert(0%);
+  }
+}
+@function rand($val){
+  $rand: math.random($val);
+  @return $rand;
+}
+
+$slots: ();
+
+@for $l from 1 through 100{
+  $slots: list.append($slots, $l)
+}
+.drop{
+  width:1px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,1));
+  position:absolute;
+  height:20px;
+  top:-10vh;
+  @for $i from 1 through list.length($slots){
+    $randNo: rand(3*$i);
+    &:nth-child(#{$i}){
+      left: list.nth($slots, $i) + 0vw;
+      $rand: math.random();
+      transform:scaleY(rand(10)+50vh);
+      filter: blur(2.5px);
+      animation-delay: math.random()*10s;
+      animation-duration: $rand*1s;
+      opacity: $rand;
+      animation-iteration-count: infinite;
+      animation-timing-function:linear;
+      animation-name:drop;
+    }
+  }
+}
+
+@keyframes drop{
+  0%{
+    top:-10vh;
+  }
+  100%{
+    top:100vh;
+  }
+}
