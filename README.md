@@ -8,7 +8,7 @@ You don't need javascript for everything.
 - [Accordion](https://cuadra.github.io/playground/css/accordion/)
 - [Push Menu](https://cuadra.github.io/playground/css/pushmenu/)
 - [Ratings](https://cuadra.github.io/playground/css/ratings/)
-- [Rain and Lightening](https://cuadra.github.io/playground/css/rain/)
+- [Rain and Lightning](https://cuadra.github.io/playground/css/rain/)
 - [Highlighter](https://cuadra.github.io/playground/css/highlighter/)
 
 ## JS
