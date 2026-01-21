@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#gradient, #color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gradient {
+    background: linear-gradient(90deg,rgba(37, 94, 138, 1) 0%, rgba(51, 158, 119, 1) 100%);
+	background-size:300% 300%;
+	animation: gradient 20s ease infinite;
+	height: 50vh;
+}
+#color{
+    background-color: rgba(37, 94, 138, 1);
+    height: 50vh;
+    animation: color 20s ease infinite;
+}
+h1 {
+    color: white;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+    font-size: 3em;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes color {
+	0% {
+    background-color: rgba(37, 94, 138, 1);
+	}
+	50% {
+    background-color: rgba(51, 158, 119, 1);
+	}
+	100% {
+    background-color: rgba(37, 94, 138, 1);
+
+    }
+}
