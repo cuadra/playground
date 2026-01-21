@@ -10,6 +10,7 @@ You don't need javascript for everything.
 - [Ratings](https://cuadra.github.io/playground/css/ratings/)
 - [Rain and Lightning](https://cuadra.github.io/playground/css/rain/)
 - [Highlighter](https://cuadra.github.io/playground/css/highlighter/)
+- [Color vs Gradient](https://cuadra.github.io/playground/css/backgrounds/animation/)
 
 ## JS
 - [Highlighter](https://cuadra.github.io/playground/js/highlighter/)
