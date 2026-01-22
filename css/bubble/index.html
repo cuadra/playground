@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Bubble</title>
+    <style>
+        :root{
+  --background-color: rgba(14,0,54, 1);
+  
+}
+.base{
+  width:500px;
+  height:500px;
+  border-radius: 500px;
+}
+.bubble{
+  margin: 0 auto;
+  background: radial-gradient(closest-side, rgba(255,255,255, 0) 60%, rgba(255,255,255, .1) 94%, rgba(255,255,255,.4) 95%, rgba(255,255,255,1));
+  position:relative;
+  overflow: hidden;
+}
+.shade{
+  position: absolute;
+}
+.shade-1{
+  background: linear-gradient(90deg, rgba(218,101,211, 1), rgba(0,218,174, 1));
+  transform: scale(.7);
+  transform: translate(15px, -15px);
+  filter: blur(3px);
+}
+.shade-2{
+  transform: scale(1);
+  background-color:var(--background-color);
+  z-index:4;
+  filter: blur(20px);
+  top: -60px;
+  left:60px;
+}
+.shade-3{
+  transform: scale(1);
+  background:radial-gradient(closest-side, rgba(255,255,255,0) 30%, rgba(255,255,255,.1) 90%);
+    z-index:12;
+  filter:blur(10px);
+}
+.glimmer{
+  transform-origin: center;
+}
+.glimmer.glimmer-3{
+  transform: scale(.05) skew(-0deg, 10deg) translate(2500px, -4000px);
+  filter: blur(100px);
+  background-color: white;
+  z-index:11;
+}
+.glimmer.glimmer-4{
+  top: -200px;
+  left: 200px;
+  opacity:.3;
+  filter: blur(50px);
+  background:radial-gradient(closest-side, rgba(36,213,124, 1) 80%, rgba(36,213,124,.1) 90%);
+  z-index:5;
+}
+.glimmer.glimmer-5{
+  top: -250px;
+  left: 250px;
+  opacity:.5;
+  filter: blur(30px);
+  background:radial-gradient(closest-side, rgba(255,255,255, 1) 80%, rgba(255,255,255,0) 80%);
+  z-index:5;
+}
+.glimmer.glimmer-6{
+  top: 300px;
+  left: -210px;
+  opacity:.5;
+  filter: blur(30px);
+  background:radial-gradient(closest-side, rgba(255,255,255, 1) 90%, rgba(255,255,255,0) 80%);
+  z-index:5;
+}
+.glimmer.glimmer-7{
+  top: 360px;
+  left: -260px;
+  filter: blur(20px);
+  background:radial-gradient(closest-side, rgba(255,255,255, 1) 90%, rgba(255,255,255,.7) 80%);
+  z-index:14;
+}
+.glimmer.glimmer-8{
+  top: -350px;
+  left: 300px;
+  filter: blur(20px);
+  background:radial-gradient(closest-side, rgba(255,255,255, 1) 50%, rgba(255,255,255,1) 80%);
+  z-index:14;
+}
+.glimmer.glimmer-1{
+  transform: scale(.09) skew(0deg, 10deg) translate(-1300px, 2000px);
+    background-color: white;
+    filter: blur(100px);
+    z-index:11;
+}
+.glimmer.glimmer-2{
+  top: -200px;
+  left: 200px;
+  opacity:.08;
+  background-color:cyan;
+  filter:blur(50px);
+  z-index:13;
+}
+.mask{
+  background:radial-gradient(closest-side, rgba(255,0,54,0) 80%, var(--background-color) 100%);
+  z-index:10;
+  filter:blur(5px)
+}
+body{
+  background-color: rgba(14,0,54, 1);
+}
+    </style>
+</head>
+<body>
+<div class='base bubble'>
+  <div class='base shade glimmer glimmer-8'></div>
+  <div class='base shade glimmer glimmer-7'></div>
+  <div class='base shade glimmer glimmer-6'></div>
+  <div class='base shade glimmer glimmer-5'></div>
+  <div class='base shade glimmer glimmer-4'></div>
+  <div class='base shade glimmer glimmer-3'></div>
+  <div class='base shade glimmer glimmer-2'></div>
+  <div class='base shade glimmer glimmer-1'></div>
+  <div class='base shade shade-3'></div>
+  <div class='base shade mask'></div>
+  <div class='base shade shade-2'></div>
+  <div class='base shade shade-1'></div>
+</div>
+</body>
+</html>
