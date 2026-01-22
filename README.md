@@ -11,6 +11,7 @@ You don't need javascript for everything.
 - [Rain and Lightning](https://cuadra.github.io/playground/css/rain/)
 - [Highlighter](https://cuadra.github.io/playground/css/highlighter/)
 - [Color vs Gradient](https://cuadra.github.io/playground/css/backgrounds/animation/)
+- [Bubble](https://cuadra.github.io/playground/css/bubble/)
 
 ## JS
 - [Highlighter](https://cuadra.github.io/playground/js/highlighter/)
