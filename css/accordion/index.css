@@ -1,4 +1,5 @@
 :root {
+  interpolate-size: allow-keywords;
   --spacing: 30px;
   --arrow: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="%23E7B44D"><path d="M480-528 296-344l-56-56 240-240 240 240-56 56-184-184Z"/></svg>');
 }
@@ -41,6 +42,18 @@ details {
   background-color: #fff9dd;
   overflow: hidden;
   user-select: none;
+}
+details::details-content {
+  block-size: 0;
+  transition:
+    block-size 0.5s,
+    content-visibility 0.5s;
+  transition-behavior: allow-discrete;
+  overflow: hidden;
+}
+
+details[open]::details-content {
+  block-size: auto;
 }
 summary {
   padding: 15px var(--spacing);
